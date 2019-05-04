@@ -1,6 +1,6 @@
 package br.com.gilmarioarantes.jdbccrudv1.persistencia.dml.inclusao;
 
-import br.com.gilmarioarantes.jdbccrudv1.model.AlunoTurma;
+import br.com.gilmarioarantes.jdbccrudv1.model.Turma;
 import br.com.gilmarioarantes.jdbccrudv1.persistencia.base.PersistenciaJdbc;
 import org.apache.log4j.Logger;
 
@@ -8,14 +8,15 @@ public class PersisteAlunoTurma extends PersistenciaJdbc {
 
     Logger logger = Logger.getLogger(PersisteAlunoTurma.class.getName());
 
-    public boolean persisteAlunoTurma(AlunoTurma alunoTurma) throws Exception{
+    public boolean persisteTurma(Turma turma) throws Exception{
 
         preparaPersistencia();
 
-        String sql = "INSERT INTO ALUNOS_TURMAS(ID_ALUNOS_TURMAS, ALUNO, TURMA)  " +
-                "VALUES('" + alunoTurma.getId() +
-                "','" + alunoTurma.getAluno().getId() +
-                "','" + alunoTurma.getTurma().getId() +
+        String sql = "INSERT INTO TURMAS " +
+                "VALUES('" + turma.getId() +
+                "','" + turma.getSemestre() +
+                "','" + turma.getDisciplina().getId() +
+                "','" + turma.getProfessor().getId() +
                 "')";
 
         stmt.executeUpdate(sql);

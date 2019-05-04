@@ -56,4 +56,3 @@ Feature: Avaliacao escolar
 	|nota1|nota2|faltas|cargaHoraria|
    |6.01|6.01|10|64|
    |10.00|10.00|10|64|
-

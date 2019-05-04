@@ -5,12 +5,8 @@ import alfa.br.com.gilmario.modelo.ValoresInvalidosException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
-
-/**
- * Created by gilmario on 26/02/17.
- */
 public class AvaliacaoTestBdd {
 
     private double nota1;
@@ -21,22 +17,22 @@ public class AvaliacaoTestBdd {
     private final Avaliacao avaliacao = new Avaliacao();
 
     @Given("^que quero testar valores invalidos$")
-    public void testaValoresInvalidos(){
-        System.out.println("\nTestando Valores InvÃ¡lidos!\n");
+    public void testaValoresInvalidos() {
+        System.out.println("\testando Valores inválidos");
     }
 
     @When("^eu informar os valores invalidos (.*) e (.*) e (.*) e (.*)$")
-    public void informarValoresInvalidos(double nota1, double nota2, int faltas, int cargaHoraria){
-        //assertFalse((nota1 > 0 && nota1 < 10) &&
-        // (nota2 > 0 && nota2 < 10) &&
-        // (faltas >= 0 && faltas < cargaHoraria));
-        System.out.println("Obtendo um conjunto de valores invÃ¡lidos.");
+    public void informarValoresInvalidos(double nota1, double nota2, int faltas, int cargaHoraria) {
+//        Boolean condicional = ((nota1 > 0 && nota1 < 10) && (nota2 > 0 && nota2 < 10) && (faltas >= 0 && faltas <= cargaHoraria));
+//        Assert.assertFalse(condicional);
+
+        System.out.println("Obtendo um conjunto de valores inválidos.");
         this.nota1 = nota1;
         this.nota2 = nota2;
         this.faltas = faltas;
         this.cargaHoraria = cargaHoraria;
     }
-
+    
     @Then("^o sistema reporta uma excecao do tipo DadosInvalidosException$")
     public void avaliandoResultado(){
         try {
@@ -48,7 +44,7 @@ public class AvaliacaoTestBdd {
     
     @Given("^que eu quero testar a reprocao por falta$")
     public void testaReprovacaoPorFalta(){
-    	System.out.println("\nTestando reprovaÃ§Ã£o por faltas!\n");
+    	System.out.println("\nTestando reprovação por faltas!\n");
     }
     
     @When("^eu informar os valores (.*) e (.*) e (.*) e (.*) , cuja quantidade de faltas supera o limite permitido$")
@@ -72,13 +68,13 @@ public class AvaliacaoTestBdd {
     
     @Given("^que eu quero testar reprovacao por media$")
     public void testaReprovacaoPorMedia(){
-        System.out.println("\nTestando reprovaÃ§Ã£o por mÃ©dia!\n");
+        System.out.println("\nTestando reprovação por média!\n");
     }
 
     @When("^eu informar os valores (.*) e (.*) e (.*) e (.*) que garatem a reprovacao por media$")
     public void informarValoresQueReprovamPorMedia(double nota1, double nota2, int faltas, int cargaHoraria){
         assertTrue((nota1 >= 0 && nota1 <= 10) && (nota2 >= 0 && nota2 <= 10) && (faltas >= 0 && faltas < cargaHoraria));
-        System.out.println("Obtendo um conjunto de valores invÃ¡lidos.");
+        System.out.println("Obtendo um conjunto de valores inválidos.");
         this.nota1 = nota1;
         this.nota2 = nota2;
         this.faltas = faltas;
@@ -89,7 +85,7 @@ public class AvaliacaoTestBdd {
     public void avaliandoReprovacaoPorMedia(){
         try {
             resultadoEsperado = avaliacao.avalia(nota1, nota2, faltas, cargaHoraria);
-            assertTrue(resultadoEsperado.equals("Reprovado por MÃ©dia."));
+            assertTrue(resultadoEsperado.equals("Reprovado por Média."));
         }catch(Exception e){
             assertTrue(e instanceof ValoresInvalidosException);
         }
@@ -120,7 +116,7 @@ public class AvaliacaoTestBdd {
     
     @Given("^que eu quero testar a aprovacao$")
     public void testaAprovacao(){
-    	System.out.println("\nTestando aprovaÃ§Ã£o!\n");
+    	System.out.println("\nTestando aprovação!\n");
     }
     
     @When("^eu informar os valores (.*) e (.*) e (.*) e (.*) que garatem a aprovacao$")
