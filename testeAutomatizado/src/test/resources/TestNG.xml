@@ -3,7 +3,7 @@
 <suite name="Suite1" verbose="1">
     <test name="Test1" >
         <classes>
-            <!--<class name="br.com.gilmarioarantes.crudspringbottest.tests.post.PostTest"></class>-->
+            <class name="br.com.gilmarioarantes.crudspringbottest.PostTest"></class>
         </classes>
     </test>
     <test name="Test2">
