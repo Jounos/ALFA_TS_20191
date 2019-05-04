@@ -1,15 +1,14 @@
 package br.com.gilmarioarantes.jdbccrudv1.persistencia.dml.inclusao;
 
-import br.com.gilmarioarantes.jdbccrudv1.model.Aluno;
-import br.com.gilmarioarantes.jdbccrudv1.util.FormataData;
-import br.com.gilmarioarantes.jdbccrudv1.util.GeraData;
-import br.com.gilmarioarantes.jdbccrudv1.util.GeraListaAlunos;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.List;
-import java.util.Random;
+import br.com.gilmarioarantes.jdbccrudv1.model.Aluno;
+import br.com.gilmarioarantes.jdbccrudv1.util.FormataData;
+import br.com.gilmarioarantes.jdbccrudv1.util.GeraListaAlunos;
 
 public class PersisteAlunoTeste {
 
@@ -34,4 +33,26 @@ public class PersisteAlunoTeste {
         }
         Assert.assertTrue(result);
     }
+    
+    @Test
+    public void incluirNovoAluno() {
+    	try {
+    		
+    		Aluno novoAluno = new Aluno();
+    		
+    		novoAluno.setId(50L);
+    		novoAluno.setNome("Geovanny Neves Liberato");
+    		novoAluno.setMatricula("2019050400");
+    		novoAluno.setDataNascimento(new FormataData().stringToTimeStamp("04-05-2019"));
+    		novoAluno.setSexo("Masculino");
+    		
+    		Boolean result = new PersisteAluno().persisteAluno(novoAluno);
+    		
+    		Assert.assertTrue(result);
+    	} catch(Exception e) {
+    		Assert.assertFalse(e instanceof Exception);
+    	}
+    	
+    	
+    }	
 }

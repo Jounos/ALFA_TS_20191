@@ -18630,3 +18630,1011 @@ INSERT INTO ALUNOS VALUES('1','20190001','Aluno0','FEMININO','1967-06-27 00:00:0
 2019-04-10 19:51:46 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
 2019-04-10 19:51:46 INFO  AlteraDisciplina:56 - Executando o método alteraCurso() da classe: AlteraDisciplina
 2019-04-10 19:51:46 INFO  AlteraDisciplina:65 - O curso da disciplina [Novo nome]foi alterado corretamente!
+2019-05-04 17:46:01 INFO  TableDropTest:14 - Executando o método _01deletaTabelaTurmasTest() da classe: TableDropTest
+2019-05-04 17:46:01 INFO  TableTurmasDrop:15 - Excluindo a tabela Turmas
+2019-05-04 17:46:01 INFO  TableTurmasDrop:21 - Tabela Turmas excluida com sucesso!
+2019-05-04 17:46:01 INFO  TableDropTest:25 - Executando o método _02deletaTabelaDisciplinasTest() da classe: TableDropTest
+2019-05-04 17:46:01 INFO  TableDisciplinasDrop:14 - Excluindo a Tabela Disciplinas
+2019-05-04 17:46:01 INFO  TableDisciplinasDrop:20 - Tabela Disciplinas excluida com sucesso!
+2019-05-04 17:46:01 INFO  TableDropTest:36 - Executando o método _03deletaTabelaProfessoresTest() da classe: TableDropTest
+2019-05-04 17:46:01 INFO  TableProfessoresDrop:15 - Excluindo a tabela Professores
+2019-05-04 17:46:01 INFO  TableProfessoresDrop:21 - Tabela Professores excluida com sucesso!
+2019-05-04 17:46:01 INFO  TableDropTest:48 - Executando o método _04deletaTabelaCursosTest() da classe: TableDropTest
+2019-05-04 17:46:01 INFO  TableCursosDrop:15 - Excluindo a tabela Cursos
+2019-05-04 17:46:01 INFO  TableCursosDrop:21 - Tabela Cursos excluida com sucesso!
+2019-05-04 17:46:01 INFO  TableDropTest:59 - Executando o método _05deletaTabelaAlunosTest() da classe: TableDropTest
+2019-05-04 17:46:01 INFO  TableAlunosDrop:15 - Excluindo a tabela Alunos
+2019-05-04 17:46:01 INFO  TableAlunosDrop:21 - Tabela Alunos excluida com sucesso!
+2019-05-04 17:46:01 INFO  TableCreateTest:13 - Executando o método _01criaTabelaAlunosTest() da classe: TableCreateTest
+2019-05-04 17:46:01 INFO  TableAlunosCreate:15 - Criando a tabela Alunos
+2019-05-04 17:46:01 INFO  TableAlunosCreate:27 - Tabela Alunos criada com sucesso!
+2019-05-04 17:46:01 INFO  TableCreateTest:24 - Executando o método _02criaTabelaCursosTest() da classe: TableCreateTest
+2019-05-04 17:46:01 INFO  TableCursosCreate:15 - Criando a tabela Cursos
+2019-05-04 17:46:01 INFO  TableCursosCreate:24 - Tabela Cursos criada com sucesso!
+2019-05-04 17:46:01 INFO  TableCreateTest:35 - Executando o método _03criaTabelaProfessoresTest() da classe: TableCreateTest
+2019-05-04 17:46:01 INFO  TableProfessoresCreate:15 - Criando a tabela Professores
+2019-05-04 17:46:01 INFO  TableProfessoresCreate:26 - Tabela Professores criada com sucesso!
+2019-05-04 17:46:01 INFO  TableCreateTest:47 - Executando o método _04criaTabelaDisciplinasTest() da classe: TableCreateTest
+2019-05-04 17:46:01 INFO  TableDisciplinasCreate:14 - Criando a Tabela Disciplinas
+2019-05-04 17:46:01 INFO  TableDisciplinasCreate:25 - Tabela Disciplinas criada com sucesso!
+2019-05-04 17:46:01 INFO  TableCreateTest:58 - Executando o método _05criaTabelaTurmasTest() da classe: TableCreateTest
+2019-05-04 17:46:01 INFO  TableTurmasCreate:15 - Criando a tabela Turmas
+2019-05-04 17:46:01 INFO  TableTurmasCreate:30 - Tabela Turmas criada com sucesso!
+2019-05-04 17:46:01 INFO  TableCreateTest:70 - Executando o método _06criaTabelaAlunosTurmasTest() da classe: TableCreateTest
+2019-05-04 17:46:01 INFO  TableAlunosTurmasCreate:15 - Criando a tabela Alunos_Turmas
+2019-05-04 17:46:01 INFO  TableAlunosTurmasCreate:30 - Tabela Alunos_Turmas criada com sucesso!
+2019-05-04 17:46:01 INFO  TestaAlteracaoTabela:42 - Executando o método adicaoFKTabelaAlunos_TurmasTest() da classe: TestaAlteracaoTabela
+2019-05-04 17:46:01 INFO  AdicionaFKTabelaAlunosTurmas:14 - Alterando a Tabela Alunos_Turmas
+2019-05-04 17:46:01 ERROR TestaAlteracaoTabela:47 - Erro ao Adicionar FK na Tabela Alunos_Turmas
+org.h2.jdbc.JdbcSQLException: Table "ALUNOS_TURMAS" not found; SQL statement:
+ALTER TABLE ALUNOS_TURMAS ADD FOREIGN KEY (TURMA) REFERENCES TURMAS(ID_TURMA) ON DELETE CASCADE;
+ ALTER TABLE TURMAS ADD FOREIGN KEY (ALUNO) REFERENCES ALUNOS(ID_ALUNO) ON DELETE CASCADE;
+ [42102-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:104)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.command.CommandList.update(CommandList.java:42)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:169)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at br.com.gilmarioarantes.jdbccrudv1.persistencia.ddl.alteracao.AdicionaFKTabelaAlunosTurmas.alteraTabela(AdicionaFKTabelaAlunosTurmas.java:19)
+	at br.com.gilmarioarantes.jdbccrudv1.persistencia.ddl.alteracao.TestaAlteracaoTabela.adicaoFKTabelaAlunos_TurmasTest(TestaAlteracaoTabela.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+2019-05-04 17:46:01 INFO  TestaAlteracaoTabela:15 - Executando o método adicaoFKTabelaDisciplinasTest() da classe: TestaAlteracaoTabela
+2019-05-04 17:46:01 INFO  AdicionaFKTabelaDisciplinas:14 - Alterando a Tabela Disciplinas
+2019-05-04 17:46:01 INFO  AdicionaFKTabelaDisciplinas:21 - Tabela Disciplinas alterada com sucesso!
+2019-05-04 17:46:01 INFO  TestaAlteracaoTabela:29 - Executando o método adicaoFKTabelaTurmasTest() da classe: TestaAlteracaoTabela
+2019-05-04 17:46:01 INFO  AdicionaFKTabelaTurmas:14 - Alterando a Tabela Turmas
+2019-05-04 17:46:01 INFO  AdicionaFKTabelaTurmas:21 - Tabela Turmas alterada com sucesso!
+2019-05-04 17:46:01 INFO  PersisteAlunoTeste:20 - Executando o método persisteAlunoTest() da classe: PersisteAlunoTeste
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO001] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO002] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:28 - A Aluna [ALUNA003] foi persistida corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:28 - A Aluna [ALUNA004] foi persistida corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO005] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO006] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO007] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:28 - A Aluna [ALUNA008] foi persistida corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO009] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO010] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO011] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO012] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO013] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO014] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO015] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO016] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:28 - A Aluna [ALUNA017] foi persistida corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO018] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO019] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO020] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO021] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO022] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO023] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO024] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO025] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO026] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO027] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO028] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO029] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO030] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO031] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO032] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO033] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:28 - A Aluna [ALUNA034] foi persistida corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO035] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO036] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO037] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:28 - A Aluna [ALUNA038] foi persistida corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO039] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO040] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:28 - A Aluna [ALUNA041] foi persistida corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO042] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO043] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:28 - A Aluna [ALUNA044] foi persistida corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO045] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO046] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteAluno:26 - O Aluno [ALUNO047] foi persistido corretamente.
+2019-05-04 17:46:01 INFO  PersisteCursoTeste:16 - Executando o método persisteCursosTest() da classe: PersisteCursoTeste
+2019-05-04 17:46:01 INFO  PersisteCurso:21 - O Curso [ENGENHARIA DE SOFTWARE] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteCurso:21 - O Curso [CIÊNCIA DA COMPUTAÇÃO] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteCurso:21 - O Curso [SISTEMAS DE INFORMAÇÃO] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteCurso:21 - O Curso [ENGENHARIA DA COMPUTAÇÃO] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessorTeste:18 - Executando o método persisteProfessorTest() da classe: PersisteProfessorTeste
+2019-05-04 17:46:01 INFO  PersisteProfessorTeste:22 - Quantidade de Professores na Lista: 72
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR001] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSORA002] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR003] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSORA004] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSORA005] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR006] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR007] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR008] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR009] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR010] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR011] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR012] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSORA013] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR014] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSORA015] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSORA016] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSORA017] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR018] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR019] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR020] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR021] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR022] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR023] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSORA024] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSORA025] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:01 INFO  PersisteProfessor:25 - O Professor [PROFESSOR026] foi persistido corretamente!
+2019-05-04 17:46:01 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR027] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR028] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR029] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR030] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR031] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR032] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR033] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR034] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR035] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR036] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSORA037] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR038] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR039] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR040] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR041] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSORA042] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR043] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR044] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSORA045] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR046] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR047] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSORA048] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSORA049] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR050] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR051] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR052] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSORA053] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR054] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR055] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR056] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR057] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR058] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR059] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSORA060] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR061] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSORA062] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSORA063] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR064] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR065] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR066] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR067] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR068] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR069] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR070] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR071] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:46:02 INFO  PersisteProfessor:25 - O Professor [PROFESSOR072] foi persistido corretamente!
+2019-05-04 17:46:02 INFO  PersisteDisciplinaTeste:21 - Executando o método persisteDisciplinaTest() da classe: PersisteDisciplinaTeste
+2019-05-04 17:46:02 INFO  ConsultaCurso:88 - Executanto o método obtemQuantidadeCursos() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [1;ALGORITMOS EM GRAFOS] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [2;ALGORITMOS: FUNDAMENTOS E ESTRUTURAS DE DADOS] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [3;ALGORITMOS: ORDENAÇÃO E BUSCA] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [4;ARQUITETURA DE COMPUTADORES] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [5;BANCO DE DADOS] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [6;CONSTRUÇÃO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [7;DESENVOLVIMENTO DE SOFTWARE CONCORRENTE] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [8;DESENVOLVIMENTO DE SOFTWARE PARA A WEB] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [9;DESENVOLVIMENTO DE SOFTWARE PARA DISPOSITIVOS MÓVEIS] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [10;DESENVOLVIMENTO DE SOFTWARE PARA PERSISTÊNCIA] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [11;ENGENHARIA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [12;ENGENHARIA ECONÔMICA PARA SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [13;ÉTICA, NORMAS E POSTURA PROFISSIONAL] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [14;EXPERIMENTAÇÃO EM ENGENHARIA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [15;GERÊNCIA DE CONFIGURAÇÃO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [16;GERÊNCIA DE PROJETO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [17;INTEGRAÇÃO 1] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [18;INTEGRAÇÃO 2] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [19;INTEGRAÇÃO DE APLICAÇÕES ] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [20;INTERAÇÃO HOMEM-COMPUTADOR] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [21;INTRODUÇÃO À ENGENHARIA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [22;INTRODUÇÃO À L�?NGUA BRASILEIRA DE SINAIS (LIBRAS)] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [23;INTRODUÇÃO À PROGRAMAÇÃO] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [24;LEITURA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [25;LINGUAGENS DE PROGRAMAÇÃO] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [26;LÓGICA] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [27;MANUTENÇÃO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [28;MATEM�?TICA DISCRETA] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [29;MERCADO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [30;MÉTODO DE DESENVOLVIMENTO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [31;MÉTODOS E FERRAMENTAS DA ENGENHARIA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [32;PR�?TICA EM ENGENHARIA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:02 INFO  PersisteDisciplina:25 - A Disciplina [33;PROCESSO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:02 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:02 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:02 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:03 INFO  PersisteDisciplina:25 - A Disciplina [34;PROJETO DETALHADO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:03 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:03 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:03 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:03 INFO  PersisteDisciplina:25 - A Disciplina [35;QUALIDADE DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:03 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:03 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:03 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:03 INFO  PersisteDisciplina:25 - A Disciplina [36;REDES E SISTEMAS DISTRIBU�?DOS] foi persistida corretamente!
+2019-05-04 17:46:03 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:03 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:03 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:03 INFO  PersisteDisciplina:25 - A Disciplina [37;REQUISITOS DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:03 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:03 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:03 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:03 INFO  PersisteDisciplina:25 - A Disciplina [38;SEGURANÇA ARQUITETURA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:03 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:03 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:03 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:03 INFO  PersisteDisciplina:25 - A Disciplina [39;SISTEMA OPERACIONAL] foi persistida corretamente!
+2019-05-04 17:46:03 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:03 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:03 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:03 INFO  PersisteDisciplina:25 - A Disciplina [40;TÉCNICAS AVANÇADAS DE CONSTRUÇÃO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:03 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:03 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:03 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:03 INFO  PersisteDisciplina:25 - A Disciplina [41;TÓPICOS EM ENGENHARIA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:46:03 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:03 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:03 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:46:03 INFO  PersisteDisciplina:25 - A Disciplina [42;VERIFICAÇÃO E VALIDAÇÃO] foi persistida corretamente!
+2019-05-04 17:46:03 INFO  PersisteTurmaTeste:24 - Executando o método persisteTurmaTest() da classe: PersisteTurmaTeste
+2019-05-04 17:46:03 INFO  ConsultaAluno:212 - Executanto o método obtemQuantidadeAlunos() da classe: ConsultaAluno
+2019-05-04 17:46:03 INFO  ConsultaProfessor:46 - Executando o método obtemQuantidadeProfessores() da classe: ConsultaProfessor
+2019-05-04 17:46:03 INFO  ConsultaDisciplina:48 - Executando o método obtemQuantidadeDisciplinas() da classe: ConsultaDisciplina
+2019-05-04 17:46:03 INFO  ConsultaProfessor:16 - Executando o método consultaPorId() da classe: ConsultaProfessor
+2019-05-04 17:46:03 INFO  ConsultaProfessor:35 - A consulta de professor por id foi bem sucedida!
+2019-05-04 17:46:03 INFO  ConsultaDisciplina:17 - Executando o método consultaPorId() da classe: ConsultaDisciplina
+2019-05-04 17:46:03 INFO  ConsultaDisciplina:37 - A consulta de disciplina por id foi bem sucedida!
+2019-05-04 17:46:03 INFO  AlteraCursoTeste:21 - Executando o método alteraNomeCursoTeste() da classe: AlteraCursoTeste
+2019-05-04 17:46:03 INFO  ConsultaCurso:88 - Executanto o método obtemQuantidadeCursos() da classe: ConsultaCurso
+2019-05-04 17:46:03 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:03 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:03 INFO  AlteraCurso:14 - Executando o método alteraNome() da classe; AlteraCurso
+2019-05-04 17:46:03 INFO  AlteraCurso:26 - O nome do curso [CURSO COM O NOME ALTERADO] foi alterado com sucesso!
+2019-05-04 17:46:03 INFO  AlteraCursoTeste:37 - Executando o método reverteAlteracaoNomeCursoTeste() da classe: AlteraCursoTeste
+2019-05-04 17:46:03 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:03 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:03 INFO  AlteraCurso:14 - Executando o método alteraNome() da classe; AlteraCurso
+2019-05-04 17:46:03 INFO  AlteraCurso:26 - O nome do curso [SISTEMAS DE INFORMAÇÃO] foi alterado com sucesso!
+2019-05-04 17:46:03 INFO  AlteraDisciplinaTeste:49 - Executando o método alteraCargaHorariaDisciplinaTest da classe: AlteraDisciplinaTeste
+2019-05-04 17:46:03 INFO  ConsultaDisciplina:17 - Executando o método consultaPorId() da classe: ConsultaDisciplina
+2019-05-04 17:46:03 INFO  ConsultaDisciplina:37 - A consulta de disciplina por id foi bem sucedida!
+2019-05-04 17:46:03 INFO  AlteraDisciplina:36 - Executando o método alteraCargaHoraria() da classe: AlteraDisciplina
+2019-05-04 17:46:03 INFO  AlteraDisciplina:47 - A carga horária da disciplina [12;ENGENHARIA ECONÔMICA PARA SOFTWARE]foi alterada corretamente!
+2019-05-04 17:46:03 INFO  AlteraDisciplinaTeste:79 - Executando o método alteraCursoDisciplinaTest() da classe: AlteraDisciplinaTeste
+2019-05-04 17:46:03 INFO  ConsultaDisciplina:17 - Executando o método consultaPorId() da classe: ConsultaDisciplina
+2019-05-04 17:46:03 INFO  ConsultaDisciplina:37 - A consulta de disciplina por id foi bem sucedida!
+2019-05-04 17:46:03 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:03 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:03 INFO  AlteraDisciplina:56 - Executando o método alteraCurso() da classe: AlteraDisciplina
+2019-05-04 17:46:03 INFO  AlteraDisciplina:65 - O curso da disciplina [12;ENGENHARIA ECONÔMICA PARA SOFTWARE]foi alterado corretamente!
+2019-05-04 17:46:03 INFO  AlteraDisciplinaTeste:19 - Executando o método alteraNomeDisciplinaTest() da classe: AlteraDisciplinaTeste
+2019-05-04 17:46:03 INFO  ConsultaDisciplina:17 - Executando o método consultaPorId() da classe: ConsultaDisciplina
+2019-05-04 17:46:03 INFO  ConsultaDisciplina:37 - A consulta de disciplina por id foi bem sucedida!
+2019-05-04 17:46:03 INFO  AlteraDisciplina:14 - Executando o método alteraNome() da classe: AlteraDisciplina
+2019-05-04 17:46:03 INFO  AlteraDisciplina:26 - O Nome da disciplina [Novo nome]foi alterado corretamente!
+2019-05-04 17:46:03 INFO  AlteraDisciplinaTeste:64 - Executando o método reverteAlteracaoCargaHorariaDisciplinaTest da classe: AlteraDisciplinaTeste
+2019-05-04 17:46:03 INFO  ConsultaDisciplina:17 - Executando o método consultaPorId() da classe: ConsultaDisciplina
+2019-05-04 17:46:03 INFO  ConsultaDisciplina:37 - A consulta de disciplina por id foi bem sucedida!
+2019-05-04 17:46:03 INFO  AlteraDisciplina:36 - Executando o método alteraCargaHoraria() da classe: AlteraDisciplina
+2019-05-04 17:46:03 INFO  AlteraDisciplina:47 - A carga horária da disciplina [Novo nome]foi alterada corretamente!
+2019-05-04 17:46:03 INFO  AlteraDisciplinaTeste:95 - Executando o método reverteAlteracaoCursoDisciplinaTest() da classe: AlteraDisciplinaTeste
+2019-05-04 17:46:03 INFO  ConsultaDisciplina:17 - Executando o método consultaPorId() da classe: ConsultaDisciplina
+2019-05-04 17:46:03 INFO  ConsultaDisciplina:37 - A consulta de disciplina por id foi bem sucedida!
+2019-05-04 17:46:03 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:46:03 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:46:03 INFO  AlteraDisciplina:56 - Executando o método alteraCurso() da classe: AlteraDisciplina
+2019-05-04 17:46:03 INFO  AlteraDisciplina:65 - O curso da disciplina [Novo nome]foi alterado corretamente!
+2019-05-04 17:50:43 INFO  TableDropTest:14 - Executando o método _01deletaTabelaTurmasTest() da classe: TableDropTest
+2019-05-04 17:50:43 INFO  TableTurmasDrop:15 - Excluindo a tabela Turmas
+2019-05-04 17:50:43 INFO  TableTurmasDrop:21 - Tabela Turmas excluida com sucesso!
+2019-05-04 17:50:43 INFO  TableDropTest:25 - Executando o método _02deletaTabelaDisciplinasTest() da classe: TableDropTest
+2019-05-04 17:50:43 INFO  TableDisciplinasDrop:14 - Excluindo a Tabela Disciplinas
+2019-05-04 17:50:43 INFO  TableDisciplinasDrop:20 - Tabela Disciplinas excluida com sucesso!
+2019-05-04 17:50:43 INFO  TableDropTest:36 - Executando o método _03deletaTabelaProfessoresTest() da classe: TableDropTest
+2019-05-04 17:50:43 INFO  TableProfessoresDrop:15 - Excluindo a tabela Professores
+2019-05-04 17:50:43 INFO  TableProfessoresDrop:21 - Tabela Professores excluida com sucesso!
+2019-05-04 17:50:43 INFO  TableDropTest:48 - Executando o método _04deletaTabelaCursosTest() da classe: TableDropTest
+2019-05-04 17:50:43 INFO  TableCursosDrop:15 - Excluindo a tabela Cursos
+2019-05-04 17:50:43 INFO  TableCursosDrop:21 - Tabela Cursos excluida com sucesso!
+2019-05-04 17:50:43 INFO  TableDropTest:59 - Executando o método _05deletaTabelaAlunosTest() da classe: TableDropTest
+2019-05-04 17:50:43 INFO  TableAlunosDrop:15 - Excluindo a tabela Alunos
+2019-05-04 17:50:43 INFO  TableAlunosDrop:21 - Tabela Alunos excluida com sucesso!
+2019-05-04 17:50:43 INFO  TableCreateTest:13 - Executando o método _01criaTabelaAlunosTest() da classe: TableCreateTest
+2019-05-04 17:50:43 INFO  TableAlunosCreate:15 - Criando a tabela Alunos
+2019-05-04 17:50:43 INFO  TableAlunosCreate:27 - Tabela Alunos criada com sucesso!
+2019-05-04 17:50:43 INFO  TableCreateTest:24 - Executando o método _02criaTabelaCursosTest() da classe: TableCreateTest
+2019-05-04 17:50:43 INFO  TableCursosCreate:15 - Criando a tabela Cursos
+2019-05-04 17:50:43 INFO  TableCursosCreate:24 - Tabela Cursos criada com sucesso!
+2019-05-04 17:50:43 INFO  TableCreateTest:35 - Executando o método _03criaTabelaProfessoresTest() da classe: TableCreateTest
+2019-05-04 17:50:43 INFO  TableProfessoresCreate:15 - Criando a tabela Professores
+2019-05-04 17:50:43 INFO  TableProfessoresCreate:26 - Tabela Professores criada com sucesso!
+2019-05-04 17:50:43 INFO  TableCreateTest:47 - Executando o método _04criaTabelaDisciplinasTest() da classe: TableCreateTest
+2019-05-04 17:50:44 INFO  TableDisciplinasCreate:14 - Criando a Tabela Disciplinas
+2019-05-04 17:50:44 INFO  TableDisciplinasCreate:25 - Tabela Disciplinas criada com sucesso!
+2019-05-04 17:50:44 INFO  TableCreateTest:58 - Executando o método _05criaTabelaTurmasTest() da classe: TableCreateTest
+2019-05-04 17:50:44 INFO  TableTurmasCreate:15 - Criando a tabela Turmas
+2019-05-04 17:50:44 INFO  TableTurmasCreate:30 - Tabela Turmas criada com sucesso!
+2019-05-04 17:50:44 INFO  TableCreateTest:70 - Executando o método _06criaTabelaAlunosTurmasTest() da classe: TableCreateTest
+2019-05-04 17:50:44 INFO  TableAlunosTurmasCreate:15 - Criando a tabela Alunos_Turmas
+2019-05-04 17:50:44 INFO  TableAlunosTurmasCreate:30 - Tabela Alunos_Turmas criada com sucesso!
+2019-05-04 17:50:44 INFO  TestaAlteracaoTabela:42 - Executando o método adicaoFKTabelaAlunos_TurmasTest() da classe: TestaAlteracaoTabela
+2019-05-04 17:50:44 INFO  AdicionaFKTabelaAlunosTurmas:14 - Alterando a Tabela Alunos_Turmas
+2019-05-04 17:50:44 ERROR TestaAlteracaoTabela:47 - Erro ao Adicionar FK na Tabela Alunos_Turmas
+org.h2.jdbc.JdbcSQLException: Table "ALUNOS_TURMAS" not found; SQL statement:
+ALTER TABLE ALUNOS_TURMAS ADD FOREIGN KEY (TURMA) REFERENCES TURMAS(ID_TURMA) ON DELETE CASCADE;
+ ALTER TABLE TURMAS ADD FOREIGN KEY (ALUNO) REFERENCES ALUNOS(ID_ALUNO) ON DELETE CASCADE;
+ [42102-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:104)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:78)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:102)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.command.CommandList.update(CommandList.java:42)
+	at org.h2.command.Command.executeUpdate(Command.java:261)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:169)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at br.com.gilmarioarantes.jdbccrudv1.persistencia.ddl.alteracao.AdicionaFKTabelaAlunosTurmas.alteraTabela(AdicionaFKTabelaAlunosTurmas.java:19)
+	at br.com.gilmarioarantes.jdbccrudv1.persistencia.ddl.alteracao.TestaAlteracaoTabela.adicaoFKTabelaAlunos_TurmasTest(TestaAlteracaoTabela.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+2019-05-04 17:50:44 INFO  TestaAlteracaoTabela:15 - Executando o método adicaoFKTabelaDisciplinasTest() da classe: TestaAlteracaoTabela
+2019-05-04 17:50:44 INFO  AdicionaFKTabelaDisciplinas:14 - Alterando a Tabela Disciplinas
+2019-05-04 17:50:44 INFO  AdicionaFKTabelaDisciplinas:21 - Tabela Disciplinas alterada com sucesso!
+2019-05-04 17:50:44 INFO  TestaAlteracaoTabela:29 - Executando o método adicaoFKTabelaTurmasTest() da classe: TestaAlteracaoTabela
+2019-05-04 17:50:44 INFO  AdicionaFKTabelaTurmas:14 - Alterando a Tabela Turmas
+2019-05-04 17:50:44 INFO  AdicionaFKTabelaTurmas:21 - Tabela Turmas alterada com sucesso!
+2019-05-04 17:50:44 INFO  PersisteAlunoTeste:20 - Executando o método persisteAlunoTest() da classe: PersisteAlunoTeste
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO001] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO002] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:28 - A Aluna [ALUNA003] foi persistida corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:28 - A Aluna [ALUNA004] foi persistida corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO005] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO006] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO007] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:28 - A Aluna [ALUNA008] foi persistida corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO009] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO010] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO011] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO012] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO013] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO014] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO015] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO016] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:28 - A Aluna [ALUNA017] foi persistida corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO018] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO019] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO020] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO021] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO022] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO023] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO024] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO025] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO026] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO027] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO028] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO029] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO030] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO031] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO032] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO033] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:28 - A Aluna [ALUNA034] foi persistida corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO035] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO036] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO037] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:28 - A Aluna [ALUNA038] foi persistida corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO039] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO040] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:28 - A Aluna [ALUNA041] foi persistida corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO042] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO043] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:28 - A Aluna [ALUNA044] foi persistida corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO045] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO046] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteAluno:26 - O Aluno [ALUNO047] foi persistido corretamente.
+2019-05-04 17:50:44 INFO  PersisteCursoTeste:16 - Executando o método persisteCursosTest() da classe: PersisteCursoTeste
+2019-05-04 17:50:44 INFO  PersisteCurso:21 - O Curso [ENGENHARIA DE SOFTWARE] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteCurso:21 - O Curso [CIÊNCIA DA COMPUTAÇÃO] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteCurso:21 - O Curso [SISTEMAS DE INFORMAÇÃO] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteCurso:21 - O Curso [ENGENHARIA DA COMPUTAÇÃO] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessorTeste:18 - Executando o método persisteProfessorTest() da classe: PersisteProfessorTeste
+2019-05-04 17:50:44 INFO  PersisteProfessorTeste:22 - Quantidade de Professores na Lista: 72
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR001] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSORA002] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR003] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSORA004] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSORA005] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR006] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR007] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR008] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR009] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR010] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR011] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR012] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSORA013] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR014] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSORA015] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSORA016] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSORA017] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR018] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR019] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR020] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR021] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR022] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR023] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSORA024] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSORA025] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR026] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR027] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR028] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR029] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR030] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR031] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR032] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR033] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR034] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR035] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:44 INFO  PersisteProfessor:25 - O Professor [PROFESSOR036] foi persistido corretamente!
+2019-05-04 17:50:44 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSORA037] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR038] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR039] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR040] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR041] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSORA042] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR043] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR044] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSORA045] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR046] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR047] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSORA048] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSORA049] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR050] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR051] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR052] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSORA053] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR054] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR055] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR056] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR057] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR058] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR059] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSORA060] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR061] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSORA062] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSORA063] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR064] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR065] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR066] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR067] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR068] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR069] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR070] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR071] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteProfessor:13 - Executando o método persisteProfessor() da classe: PersisteProfessor
+2019-05-04 17:50:45 INFO  PersisteProfessor:25 - O Professor [PROFESSOR072] foi persistido corretamente!
+2019-05-04 17:50:45 INFO  PersisteDisciplinaTeste:21 - Executando o método persisteDisciplinaTest() da classe: PersisteDisciplinaTeste
+2019-05-04 17:50:45 INFO  ConsultaCurso:88 - Executanto o método obtemQuantidadeCursos() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [1;ALGORITMOS EM GRAFOS] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [2;ALGORITMOS: FUNDAMENTOS E ESTRUTURAS DE DADOS] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [3;ALGORITMOS: ORDENAÇÃO E BUSCA] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [4;ARQUITETURA DE COMPUTADORES] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [5;BANCO DE DADOS] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [6;CONSTRUÇÃO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [7;DESENVOLVIMENTO DE SOFTWARE CONCORRENTE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [8;DESENVOLVIMENTO DE SOFTWARE PARA A WEB] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [9;DESENVOLVIMENTO DE SOFTWARE PARA DISPOSITIVOS MÓVEIS] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [10;DESENVOLVIMENTO DE SOFTWARE PARA PERSISTÊNCIA] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [11;ENGENHARIA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [12;ENGENHARIA ECONÔMICA PARA SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [13;ÉTICA, NORMAS E POSTURA PROFISSIONAL] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [14;EXPERIMENTAÇÃO EM ENGENHARIA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [15;GERÊNCIA DE CONFIGURAÇÃO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [16;GERÊNCIA DE PROJETO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [17;INTEGRAÇÃO 1] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [18;INTEGRAÇÃO 2] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [19;INTEGRAÇÃO DE APLICAÇÕES ] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [20;INTERAÇÃO HOMEM-COMPUTADOR] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [21;INTRODUÇÃO À ENGENHARIA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [22;INTRODUÇÃO À L�?NGUA BRASILEIRA DE SINAIS (LIBRAS)] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [23;INTRODUÇÃO À PROGRAMAÇÃO] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [24;LEITURA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [25;LINGUAGENS DE PROGRAMAÇÃO] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [26;LÓGICA] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [27;MANUTENÇÃO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [28;MATEM�?TICA DISCRETA] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [29;MERCADO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [30;MÉTODO DE DESENVOLVIMENTO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [31;MÉTODOS E FERRAMENTAS DA ENGENHARIA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [32;PR�?TICA EM ENGENHARIA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [33;PROCESSO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:45 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:45 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:45 INFO  PersisteDisciplina:25 - A Disciplina [34;PROJETO DETALHADO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:45 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:46 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:46 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:46 INFO  PersisteDisciplina:25 - A Disciplina [35;QUALIDADE DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:46 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:46 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:46 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:46 INFO  PersisteDisciplina:25 - A Disciplina [36;REDES E SISTEMAS DISTRIBU�?DOS] foi persistida corretamente!
+2019-05-04 17:50:46 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:46 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:46 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:46 INFO  PersisteDisciplina:25 - A Disciplina [37;REQUISITOS DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:46 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:46 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:46 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:46 INFO  PersisteDisciplina:25 - A Disciplina [38;SEGURANÇA ARQUITETURA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:46 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:46 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:46 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:46 INFO  PersisteDisciplina:25 - A Disciplina [39;SISTEMA OPERACIONAL] foi persistida corretamente!
+2019-05-04 17:50:46 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:46 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:46 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:46 INFO  PersisteDisciplina:25 - A Disciplina [40;TÉCNICAS AVANÇADAS DE CONSTRUÇÃO DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:46 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:46 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:46 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:46 INFO  PersisteDisciplina:25 - A Disciplina [41;TÓPICOS EM ENGENHARIA DE SOFTWARE] foi persistida corretamente!
+2019-05-04 17:50:46 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:46 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:46 INFO  PersisteDisciplina:13 - Executando o método persisteDisciplina() da classe; PersisteDisciplina
+2019-05-04 17:50:46 INFO  PersisteDisciplina:25 - A Disciplina [42;VERIFICAÇÃO E VALIDAÇÃO] foi persistida corretamente!
+2019-05-04 17:50:46 INFO  PersisteTurmaTeste:24 - Executando o método persisteTurmaTest() da classe: PersisteTurmaTeste
+2019-05-04 17:50:46 INFO  ConsultaAluno:212 - Executanto o método obtemQuantidadeAlunos() da classe: ConsultaAluno
+2019-05-04 17:50:46 INFO  ConsultaProfessor:46 - Executando o método obtemQuantidadeProfessores() da classe: ConsultaProfessor
+2019-05-04 17:50:46 INFO  ConsultaDisciplina:48 - Executando o método obtemQuantidadeDisciplinas() da classe: ConsultaDisciplina
+2019-05-04 17:50:46 INFO  ConsultaProfessor:16 - Executando o método consultaPorId() da classe: ConsultaProfessor
+2019-05-04 17:50:46 INFO  ConsultaProfessor:35 - A consulta de professor por id foi bem sucedida!
+2019-05-04 17:50:46 INFO  ConsultaDisciplina:17 - Executando o método consultaPorId() da classe: ConsultaDisciplina
+2019-05-04 17:50:46 INFO  ConsultaDisciplina:37 - A consulta de disciplina por id foi bem sucedida!
+2019-05-04 17:50:46 INFO  AlteraCursoTeste:21 - Executando o método alteraNomeCursoTeste() da classe: AlteraCursoTeste
+2019-05-04 17:50:46 INFO  ConsultaCurso:88 - Executanto o método obtemQuantidadeCursos() da classe: ConsultaCurso
+2019-05-04 17:50:46 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:46 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:46 INFO  AlteraCurso:14 - Executando o método alteraNome() da classe; AlteraCurso
+2019-05-04 17:50:46 INFO  AlteraCurso:26 - O nome do curso [CURSO COM O NOME ALTERADO] foi alterado com sucesso!
+2019-05-04 17:50:46 INFO  AlteraCursoTeste:37 - Executando o método reverteAlteracaoNomeCursoTeste() da classe: AlteraCursoTeste
+2019-05-04 17:50:46 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:46 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:46 INFO  AlteraCurso:14 - Executando o método alteraNome() da classe; AlteraCurso
+2019-05-04 17:50:46 INFO  AlteraCurso:26 - O nome do curso [SISTEMAS DE INFORMAÇÃO] foi alterado com sucesso!
+2019-05-04 17:50:46 INFO  AlteraDisciplinaTeste:49 - Executando o método alteraCargaHorariaDisciplinaTest da classe: AlteraDisciplinaTeste
+2019-05-04 17:50:46 INFO  ConsultaDisciplina:17 - Executando o método consultaPorId() da classe: ConsultaDisciplina
+2019-05-04 17:50:46 INFO  ConsultaDisciplina:37 - A consulta de disciplina por id foi bem sucedida!
+2019-05-04 17:50:46 INFO  AlteraDisciplina:36 - Executando o método alteraCargaHoraria() da classe: AlteraDisciplina
+2019-05-04 17:50:46 INFO  AlteraDisciplina:47 - A carga horária da disciplina [12;ENGENHARIA ECONÔMICA PARA SOFTWARE]foi alterada corretamente!
+2019-05-04 17:50:46 INFO  AlteraDisciplinaTeste:79 - Executando o método alteraCursoDisciplinaTest() da classe: AlteraDisciplinaTeste
+2019-05-04 17:50:46 INFO  ConsultaDisciplina:17 - Executando o método consultaPorId() da classe: ConsultaDisciplina
+2019-05-04 17:50:46 INFO  ConsultaDisciplina:37 - A consulta de disciplina por id foi bem sucedida!
+2019-05-04 17:50:46 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:46 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:46 INFO  AlteraDisciplina:56 - Executando o método alteraCurso() da classe: AlteraDisciplina
+2019-05-04 17:50:46 INFO  AlteraDisciplina:65 - O curso da disciplina [12;ENGENHARIA ECONÔMICA PARA SOFTWARE]foi alterado corretamente!
+2019-05-04 17:50:46 INFO  AlteraDisciplinaTeste:19 - Executando o método alteraNomeDisciplinaTest() da classe: AlteraDisciplinaTeste
+2019-05-04 17:50:46 INFO  ConsultaDisciplina:17 - Executando o método consultaPorId() da classe: ConsultaDisciplina
+2019-05-04 17:50:46 INFO  ConsultaDisciplina:37 - A consulta de disciplina por id foi bem sucedida!
+2019-05-04 17:50:46 INFO  AlteraDisciplina:14 - Executando o método alteraNome() da classe: AlteraDisciplina
+2019-05-04 17:50:46 INFO  AlteraDisciplina:26 - O Nome da disciplina [Novo nome]foi alterado corretamente!
+2019-05-04 17:50:46 INFO  AlteraDisciplinaTeste:64 - Executando o método reverteAlteracaoCargaHorariaDisciplinaTest da classe: AlteraDisciplinaTeste
+2019-05-04 17:50:46 INFO  ConsultaDisciplina:17 - Executando o método consultaPorId() da classe: ConsultaDisciplina
+2019-05-04 17:50:46 INFO  ConsultaDisciplina:37 - A consulta de disciplina por id foi bem sucedida!
+2019-05-04 17:50:46 INFO  AlteraDisciplina:36 - Executando o método alteraCargaHoraria() da classe: AlteraDisciplina
+2019-05-04 17:50:46 INFO  AlteraDisciplina:47 - A carga horária da disciplina [Novo nome]foi alterada corretamente!
+2019-05-04 17:50:46 INFO  AlteraDisciplinaTeste:95 - Executando o método reverteAlteracaoCursoDisciplinaTest() da classe: AlteraDisciplinaTeste
+2019-05-04 17:50:46 INFO  ConsultaDisciplina:17 - Executando o método consultaPorId() da classe: ConsultaDisciplina
+2019-05-04 17:50:46 INFO  ConsultaDisciplina:37 - A consulta de disciplina por id foi bem sucedida!
+2019-05-04 17:50:46 INFO  ConsultaCurso:17 - Executando o método consultaPorId() da classe: ConsultaCurso
+2019-05-04 17:50:46 INFO  ConsultaCurso:31 - A Consulta do curso pelo seu Id foi bem sucedida!
+2019-05-04 17:50:46 INFO  AlteraDisciplina:56 - Executando o método alteraCurso() da classe: AlteraDisciplina
+2019-05-04 17:50:46 INFO  AlteraDisciplina:65 - O curso da disciplina [Novo nome]foi alterado corretamente!

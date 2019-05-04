@@ -1,15 +1,16 @@
 package br.com.gilmarioarantes.jdbccrudv1.persistencia.dml.consulta;
 
-import br.com.gilmarioarantes.jdbccrudv1.model.Aluno;
-import br.com.gilmarioarantes.jdbccrudv1.util.FormataData;
-import br.com.gilmarioarantes.jdbccrudv1.util.GeraData;
+import java.sql.Timestamp;
+import java.util.List;
+import java.util.Random;
+
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.sql.Timestamp;
-import java.util.List;
-import java.util.Random;
+import br.com.gilmarioarantes.jdbccrudv1.model.Aluno;
+import br.com.gilmarioarantes.jdbccrudv1.util.FormataData;
+import br.com.gilmarioarantes.jdbccrudv1.util.GeraData;
 
 public class ConsultaAlunoTeste {
 
@@ -21,7 +22,7 @@ public class ConsultaAlunoTeste {
         logger.info("Executado o Método consultaPeloIdTest() da classe: " + this.getClass().getSimpleName());
 
         try{
-            Aluno aluno = new ConsultaAluno().consultaPorId(new Long(new Random().nextLong()*47));
+            Aluno aluno = new ConsultaAluno().consultaPorId(new Long(new Random().nextInt(46)+1));
             Assert.assertTrue(aluno.getId() != 0);
         }catch (Exception e){
             logger.error("Erro ao consultar o aluno pelo seu id!", e);
